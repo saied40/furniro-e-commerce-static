@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --moderate-orange: #b88e2f;
+  --dark-33: #333;
+  --main-clr: var(--moderate-orange);
+  --main-font: "Montserrat", sans-serif;
+  --secondary-font: "Poppins", sans-serif;
+}
+
+#carousel.no-transition {
+  scroll-behavior: auto;
+}
+#carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+#carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+
+.active\:flex.active {
+  display: flex;
+}
+
+.dropdown-menu.show {
+  top: 100% !important;
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+}
+
+/**** HEADER COMPONENT ****/
+.tw-before-badge {
+  @apply tw-relative before:tw-absolute before:-tw-top-[15%] before:-tw-right-[15%] before:tw-content-[attr(data-badge)] before:tw-text-white before:tw-bg-red-600 before:tw-text-xs before:tw-px-1 before:tw-rounded-full;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+  color: inherit;
+  font-weight: 500;
+  transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .badge {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #000;
+    margin-left: .5rem;
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &.active {
+    border-bottom: .128rem solid #000;
+    font-weight: 600;
+
+    .badge {
+      font-weight: 500;
+      font-size: .9rem;
+      color: #fff;
+      background-color: #000;
+      border-radius: 50%;
+    }
+  }
+}

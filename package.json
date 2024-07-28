@@ -1,0 +1,14 @@
+{
+  "name": "furniro-e-commerce-website",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "build": "npx tailwindcss -i ./style/src.css -o ./style/tailwind.css --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "tailwindcss": "^3.4.6"
+  }
+}
