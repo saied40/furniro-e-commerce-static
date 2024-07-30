@@ -2,7 +2,7 @@
 
 it's a semple e-commerce website design I built using bootstrap, tailwind css, and vanilla javascript
 
-you can check it out on the live server [here](https://saied40.github.io/furniro-e-commerce-static/){:target="_blank"}
+you can check it out on the live server <a href="https://saied40.github.io/furniro-e-commerce-static/" target="_blank">here</a>
 
 ### project Structure
 
