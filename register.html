@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/logo.png" type="image/png">
+  <title>Furniro E-Commerce Website || Register</title>
+  <link rel="stylesheet" href="./style/Bootstrap-v5.3.3/bootstrap.min.css">
+  <link rel="stylesheet" href="./style/tailwind.css">
+  <script defer src="./script/header.js"></script>
+  <script defer src="./script/form.js"></script>
+</head>
+
+<body class="tw-bg-white">script
+  <header id="header" class="tw-bg-white tw-fixed tw-w-full tw-top-0 tw-left-0 tw-z-50">
+    <div class="navbar navbar-expand-lg">
+      <div class="container-fluid xl:tw-gap-12 tw-px-0 tw-w-4/5 lg:tw-gap-8 lg:max-xl:tw-w-11/12">
+        <a class="navbar-brand tw-flex tw-items-center tw-gap-1" href="./index.html">
+          <img src="./img/logo.png" alt="logo" class="tw-w-12">
+          <h1 class="tw-text-4xl tw-font-bold">Furniro</h1>
+        </a>
+        <button class="navbar-toggler tw-menu-btn !tw-shadow-none" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="collapse navbar-collapse tw-justify-between" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav mb-2 mb-lg-0 tw-items-center tw-gap-20 max-[992px]:tw-w-2/3 max-[992px]:tw-mx-auto max-[992px]:tw-items-start max-[992px]:tw-gap-12 max-[992px]:!tw-my-12">
+            <li><a href="./index.html" class="tw-nav-link">Home</a></li>
+            <li><a href="./shop-products.html" class="tw-nav-link">Shop</a></li>
+            <li><a href="./login.html" class="tw-nav-link tw-active">Login / Register</a></li>
+          </ul>
+          <ul
+            class="tw-flex tw-items-center md:tw-gap-11 max-[992px]:tw-w-2/3 max-[992px]:tw-mx-auto max-[992px]:!tw-gap-16 max-[992px]:tw-justify-start max-[992px]:tw-my-12">
+            <li><a href="./index.html" class=""><img src="./img/user-alert.png" alt="User" class="tw-w-7"></a></li>
+            <li>
+              <button type="button" class="!tw-border-0 !tw-outline-0" data-bs-toggle="offcanvas"
+                data-bs-target="#search" aria-controls="search">
+                <img src="./img/search.png" alt="Search" class="tw-w-7" />
+              </button>
+            </li>
+            <li>
+              <button type="button" class="!tw-border-0 !tw-outline-0 tw-before-badge" data-badge="5"
+                data-bs-toggle="offcanvas" data-bs-target="#fav&shopCart" aria-controls="fav&shopCart"
+                id="openFavorites">
+                <img src="./img/heart.png" alt="Favorites" class="tw-w-7" />
+              </button>
+            </li>
+            <li>
+              <button type="button" class="!tw-border-0 !tw-outline-0 tw-before-badge" data-badge="3"
+                data-bs-toggle="offcanvas" data-bs-target="#fav&shopCart" aria-controls="fav&shopCart"
+                id="openShoppingCart">
+                <img src="./img/shopping-cart.png" alt="Shopping Cart" class="tw-w-7" />
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-top !tw-h-[72vh]" tabindex="-1" id="search" aria-labelledby="searchLabel">
+      <button type="button" class="btn-close focus:!tw-shadow-none tw-ml-auto tw-mb-0 tw-m-6 tw-text-xl"
+        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class="container offcanvas-body tw-flex tw-flex-col tw-gap-12 tw-pt-0">
+        <form action="." class="tw-flex tw-flex-col tw-items-start tw-w-full">
+          <div class="tw-flex tw-items-center tw-w-full tw-border-b-2 tw-border-black tw-pb-2 tw-mb-4">
+            <div
+              class="dropdown tw-w-1/5 after:tw-top-0 after:tw-right-0 after:tw-bg-dark-33 after:tw-w-px after:tw-h-full after:tw-inline-block after:tw-absolute">
+              <button
+                class="btn btn-secondary dropdown-toggle !tw-bg-transparent !tw-text-dark-33 !tw-border-0 tw-w-4/5 tw-text-xl tw-flex tw-items-center tw-mx-8 after:tw-border-t-0 after:tw-border-l-0 after:tw-border-b-2 after:tw-border-r-2 after:tw-border-solid after:tw-border-black after:tw-ml-auto after:tw-w-2 after:tw-h-2 after:tw-rotate-45"
+                type="button" data-bs-toggle="dropdown" aria-expanded="false" id="dropdownHead">
+                All Categories
+              </button>
+              <ul class="dropdown-menu *:tw-px-4 tw-w-3/5" id="dropdownMenu">
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="all">All Categories</li>
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="clothes">Clothes</li>
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="urbanSkirt">UrbanSkirt</li>
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="velvetGown">VelvetGown</li>
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="lushShorts">LushShorts</li>
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="vintage">Vintage</li>
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="wedding">Wedding</li>
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="cotton">Cotton</li>
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="linen">Linen</li>
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="navy">Navy</li>
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="urban">Urban</li>
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="businessMeeting">Business
+                  Meeting</li>
+                <li class="dropdown-item tw-cursor-pointer hover:tw-bg-gray-200" data-value="formal">Formal</li>
+              </ul>
+            </div>
+            <div class="tw-w-4/5">
+              <input type="search" name="search"
+                class="tw-w-11/12 tw-py-2 tw-px-8 tw-font-medium tw-text-xl focus-visible:tw-outline-none placeholder:tw-text-black"
+                placeholder="Search For Products">
+              <button type="submit" class="tw-align-middle"><img src="./img/search.png" alt="submit"
+                  class="tw-w-6"></button>
+            </div>
+          </div>
+          <ul class="tw-flex tw-items-center tw-gap-8 tw-text-base tw-font-medium tw-ml-8">
+            <li class="tw-font-semibold">Quick Search:</li>
+            <li class=""><a href="./shop-products.html" class="hover:tw-text-main tw-transition-all">Clothes</a></li>
+            <li class=""><a href="./shop-products.html" class="hover:tw-text-main tw-transition-all">UrbanSkirt</a></li>
+            <li class=""><a href="./shop-products.html" class="hover:tw-text-main tw-transition-all">VelvetGown</a></li>
+            <li class=""><a href="./shop-products.html" class="hover:tw-text-main tw-transition-all">LushShorts</a></li>
+          </ul>
+        </form>
+        <div class="" id="carouselWrapper">
+          <ul class="tw-carousel-cont" id="carousel">
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-7.png" alt="carousel item 7" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 7</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-8.png" alt="carousel item 8" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 8</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-9.png" alt="carousel item 9" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 9</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-10.png" alt="carousel item 10" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 10</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-11.png" alt="carousel item 11" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 11</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-12.png" alt="carousel item 12" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 1</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-1.png" alt="carousel item 1" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 1</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-2.png" alt="carousel item 2" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 2</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-3.png" alt="carousel item 3" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 3</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-4.png" alt="carousel item 4" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 4</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-5.png" alt="carousel item 5" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 5</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-6.png" alt="carousel item 6" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 6</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-7.png" alt="carousel item 7" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 7</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-8.png" alt="carousel item 8" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 8</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-9.png" alt="carousel item 9" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 9</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-10.png" alt="carousel item 10" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 10</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-11.png" alt="carousel item 11" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 11</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-12.png" alt="carousel item 12" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 1</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-1.png" alt="carousel item 1" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 1</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-2.png" alt="carousel item 2" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 2</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-3.png" alt="carousel item 3" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 3</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-4.png" alt="carousel item 4" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 4</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-5.png" alt="carousel item 5" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 5</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+            <li class="tw-carousel-card">
+              <a href="./product-details.html" class="">
+                <img draggable="false" src="./img/product-6.png" alt="carousel item 6" class="">
+              </a>
+              <div class="tw-txt">
+                <a href="./product-details.html" class="">Product 6</a>
+                <p class="">$20.00</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="fav&shopCart">
+      <button type="button" class="btn-close focus:!tw-shadow-none tw-ml-auto tw-mt-4 tw-mr-4"
+        data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <div class="offcanvas-body">
+        <div class="nav nav-tabs tw-items-center tw-justify-around tw-border-0" id="navTab" role="tablist">
+          <button class="nav-link tw-text-dark-33" id="favoritesTab" data-bs-toggle="tab" data-bs-target="#favoritesNav"
+            type="button" role="tab" aria-controls="favoritesNav" aria-selected="true">Wishlist <span
+              class="badge">5</span></button>
+          <button class="nav-link tw-text-dark-33" id="shoppingTab" data-bs-toggle="tab" data-bs-target="#shoppingNav"
+            type="button" role="tab" aria-controls="shoppingNav" aria-selected="false">Shopping Cart <span
+              class="badge">3</span></button>
+        </div>
+        <div class="tab-content tw-mt-8" id="navTabContent">
+          <ul class="tab-pane fade active:flex tw-flex-col" id="favoritesNav" role="tabpanel"
+            aria-labelledby="favoritesNavTab" tabindex="0">
+            <li class="tw-flex tw-gap-3 tw-border-b tw-py-4">
+              <a href="./product-details.html"
+                class="tw-transition-all tw-duration-300 hover:tw-scale-105 child-hover-effect:tw-rounded-2xl">
+                <img src="./img/product-01.jpg" alt="" class="tw-rounded-3xl">
+              </a>
+              <div
+                class="tw-flex tw-flex-col tw-items-start tw-justify-around tw-text-dark-33 tw-font-semibold tw-text-base">
+                <a href="./product-details.html" class="tw-transition-all hover:tw-text-main">Sophisticated Swagger
+                  Suit</a>
+                <p class="">$50.00</p>
+              </div>
+              <button type="button" class="btn-close focus:!tw-shadow-none tw-m-auto" aria-label="Close"
+                onclick="this.parentElement.style.display = 'none'"></button>
+            </li>
+            <li class="tw-flex tw-gap-3 tw-border-b tw-py-4">
+              <a href="./product-details.html"
+                class="tw-transition-all tw-duration-300 hover:tw-scale-105 child-hover-effect:tw-rounded-2xl">
+                <img src="./img/product-02.jpg" alt="" class="tw-rounded-3xl">
+              </a>
+              <div
+                class="tw-flex tw-flex-col tw-items-start tw-justify-around tw-text-dark-33 tw-font-semibold tw-text-base">
+                <a href="./product-details.html" class="tw-transition-all hover:tw-text-main">Cozy Knit Cardigan
+                  Sweater</a>
+                <p class="">$40.00</p>
+              </div>
+              <button type="button" class="btn-close focus:!tw-shadow-none tw-m-auto" aria-label="Close"
+                onclick="this.parentElement.style.display = 'none'"></button>
+            </li>
+            <li class="tw-flex tw-gap-3 tw-border-b tw-py-4">
+              <a href="./product-details.html"
+                class="tw-transition-all tw-duration-300 hover:tw-scale-105 child-hover-effect:tw-rounded-2xl">
+                <img src="./img/product-03.jpg" alt="" class="tw-rounded-3xl">
+              </a>
+              <div
+                class="tw-flex tw-flex-col tw-items-start tw-justify-around tw-text-dark-33 tw-font-semibold tw-text-base">
+                <a href="./product-details.html" class="tw-transition-all hover:tw-text-main">Athletic Mesh Sports
+                  Leggings</a>
+                <p class="">$65.00</p>
+              </div>
+              <button type="button" class="btn-close focus:!tw-shadow-none tw-m-auto" aria-label="Close"
+                onclick="this.parentElement.style.display = 'none'"></button>
+            </li>
+            <a href="./wishlist.html" role="button" class="tw-dark-btn tw-my-12">Check Your Favorites</a>
+          </ul>
+          <ul class="tab-pane fade active:flex tw-flex-col" id="shoppingNav" role="tabpanel"
+            aria-labelledby="shoppingNavTab" tabindex="0">
+            <li class="tw-flex tw-gap-3 tw-border-b tw-py-4">
+              <a href="./product-details.html"
+                class="tw-transition-all tw-duration-300 hover:tw-scale-105 child-hover-effect:tw-rounded-2xl">
+                <img src="./img/product-01.jpg" alt="" class="tw-rounded-3xl">
+              </a>
+              <div
+                class="tw-flex tw-flex-col tw-items-start tw-justify-around tw-text-dark-33 tw-font-semibold tw-text-base">
+                <a href="./product-details.html" class="tw-transition-all hover:tw-text-main">Sophisticated Swagger
+                  Suit</a>
+                <div class="tw-flex tw-items-center tw-justify-between tw-w-full">
+                  <div class="">
+                    <button type="button"
+                      class="tw-text-white tw-bg-black tw-w-6 tw-h-6 tw-text-center tw-rounded-full">-</button>
+                    <span
+                      class="tw-text-dark-33 tw-bg-transparent tw-border tw-border-dark-33 tw-inline-block tw-w-6 tw-h-6 tw-text-center tw-text-sm tw-rounded-full">1</span>
+                    <button type="button"
+                      class="tw-text-white tw-bg-black tw-w-6 tw-h-6 tw-text-center tw-rounded-full">+</button>
+                  </div>
+                  <p class="">$50.00</p>
+                </div>
+              </div>
+              <button type="button" class="btn-close focus:!tw-shadow-none tw-m-auto" aria-label="Close"
+                onclick="this.parentElement.style.display = 'none'"></button>
+            </li>
+            <li class="tw-flex tw-gap-3 tw-border-b tw-py-4">
+              <a href="./product-details.html"
+                class="tw-transition-all tw-duration-300 hover:tw-scale-105 child-hover-effect:tw-rounded-2xl">
+                <img src="./img/product-02.jpg" alt="" class="tw-rounded-3xl">
+              </a>
+              <div
+                class="tw-flex tw-flex-col tw-items-start tw-justify-around tw-text-dark-33 tw-font-semibold tw-text-base">
+                <a href="./product-details.html" class="tw-transition-all hover:tw-text-main">Cozy Knit Cardigan
+                  Sweater</a>
+                <div class="tw-flex tw-items-center tw-justify-between tw-w-full">
+                  <div class="">
+                    <button type="button"
+                      class="tw-text-white tw-bg-black tw-w-6 tw-h-6 tw-text-center tw-rounded-full">-</button>
+                    <span
+                      class="tw-text-dark-33 tw-bg-transparent tw-border tw-border-dark-33 tw-inline-block tw-w-6 tw-h-6 tw-text-center tw-text-sm tw-rounded-full">1</span>
+                    <button type="button"
+                      class="tw-text-white tw-bg-black tw-w-6 tw-h-6 tw-text-center tw-rounded-full">+</button>
+                  </div>
+                  <p class="">$40.00</p>
+                </div>
+              </div>
+              <button type="button" class="btn-close focus:!tw-shadow-none tw-m-auto" aria-label="Close"
+                onclick="this.parentElement.style.display = 'none'"></button>
+            </li>
+            <li class="tw-flex tw-gap-3 tw-border-b tw-py-4">
+              <a href="./product-details.html"
+                class="tw-transition-all tw-duration-300 hover:tw-scale-105 child-hover-effect:tw-rounded-2xl">
+                <img src="./img/product-03.jpg" alt="" class="tw-rounded-3xl">
+              </a>
+              <div
+                class="tw-flex tw-flex-col tw-items-start tw-justify-around tw-text-dark-33 tw-font-semibold tw-text-base">
+                <a href="./product-details.html" class="tw-transition-all hover:tw-text-main">Athletic Mesh Sports
+                  Leggings</a>
+                <div class="tw-flex tw-items-center tw-justify-between tw-w-full">
+                  <div class="">
+                    <button type="button"
+                      class="tw-text-white tw-bg-black tw-w-6 tw-h-6 tw-text-center tw-rounded-full">-</button>
+                    <span
+                      class="tw-text-dark-33 tw-bg-transparent tw-border tw-border-dark-33 tw-inline-block tw-w-6 tw-h-6 tw-text-center tw-text-sm tw-rounded-full">1</span>
+                    <button type="button"
+                      class="tw-text-white tw-bg-black tw-w-6 tw-h-6 tw-text-center tw-rounded-full">+</button>
+                  </div>
+                  <p class="">$65.00</p>
+                </div>
+              </div>
+              <button type="button" class="btn-close focus:!tw-shadow-none tw-m-auto" aria-label="Close"
+                onclick="this.parentElement.style.display = 'none'"></button>
+            </li>
+            <div class="tw-flex tw-flex-col tw-items-center tw-gap-5 tw-my-8">
+              <div class="tw-flex tw-items-center tw-justify-between tw-w-full">
+                <p class="tw-text-dark-33 tw-font-semibold tw-text-base">Subtotal:</p>
+                <p class="tw-text-dark-33 tw-font-semibold tw-text-base">$155.00</p>
+              </div>
+              <div class="tw-flex tw-items-center tw-gap-2">
+                <img src="./img/ship.png" alt="ship" class="tw-w-1/5 tw-p-3">
+                <div class="tw-flex tw-flex-col tw-gap-2 tw-items-start">
+                  <p class="tw-text-dark-33 tw-font-medium tw-text-base tw-text-wrap">Congratulations, you've got free
+                    shipping!</p>
+                  <div class="tw-w-full tw-h-1 tw-bg-gray-200 tw-rounded">
+                    <div class="tw-w-3/4 tw-h-full tw-bg-black tw-rounded"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tw-flex tw-flex-col tw-items-center tw-gap-4 tw-my-12">
+              <a href="./checkout.html" role="button" class="tw-dark-btn-outline">Checkout</a>
+              <a href="./cart.html" role="button" class="tw-dark-btn">View Cart</a>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="tw-relative tw-mb-16" id="main">
+    <div class="tw-page-head">
+      <img src="./img/logo.png" alt="" class="">
+      <h2 class="tw-title">Register</h2>
+      <nav aria-label="breadcrumb" class="tw-mt-2">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item tw-underline"><a href="./index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Register</li>
+        </ol>
+      </nav>
+    </div>
+    <form class="tw-w-2/5 tw-mx-auto tw-my-10">
+      <div class="row mb-3">
+        <div class="col">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="firstName" placeholder="First Name" />
+            <label for="firstName">First Name</label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-floating">
+            <input type="text" class="form-control" id="lastName" placeholder="Last Name" />
+            <label for="lastName">Last Name</label>
+          </div>
+        </div>
+      </div>
+      <div class="mb-3 form-floating">
+        <input type="text" class="form-control" id="username" placeholder="Username">
+        <label for="username" class="form-label">Username</label>
+      </div>
+      <div class="mb-3 form-floating">
+        <input type="email" class="form-control" id="email" placeholder="Email address">
+        <label for="email" class="form-label">Email address</label>
+      </div>
+      <div class="mb-3 form-floating">
+        <input type="number" class="form-control" id="phone" placeholder="Phone Number">
+        <label for="phone" class="form-label">Phone Number</label>
+      </div>
+      <div class="mb-3 form-floating tw-slash-eye-cont">
+        <input type="password" class="form-control" id="password1" placeholder="Password">
+        <label for="password1" class="form-label">Password</label>
+        <img src="./img/eye-open.svg" alt="eye" class="tw-img" onclick="togglePass(this.parentElement, 'password1')">
+      </div>
+      <div class="mb-3 form-floating tw-slash-eye-cont">
+        <input type="password" class="form-control" id="password2" placeholder="Confirm Password">
+        <label for="password2" class="form-label">Confirm Password</label>
+        <img src="./img/eye-open.svg" alt="eye" class="tw-img" onclick="togglePass(this.parentElement, 'password2')">
+      </div>
+      <div class="mb-3 form-floating">
+        <input type="date" name="birth" id="birth" class="form-control">
+        <label for="birth">Date of Birth: </label>
+      </div>
+      <div class="mb-3">
+        <h5 class="tw-text-base tw-font-medium tw-mb-3">Gender:</h5>
+        <input type="radio" class="form-radio" id="male" name="gender">
+        <label for="male" class="form-label tw-mr-4">Male</label>
+        <input type="radio" class="form-radio" id="female" name="gender">
+        <label for="female" class="form-label tw-mr-4">Female</label>
+        <input type="radio" class="form-radio" id="other" name="gender">
+        <label for="other" class="form-label">Other</label>
+      </div>
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="stay">
+        <label class="form-check-label" for="stay">I agree to the terms and conditions</label>
+      </div>
+      <p class="tw-text-sm tw-font-medium mb-5">Already have an account ? <a href="./login.html"
+          class="tw-underline">Login</a></p>
+      <button type="submit" class="tw-dark-btn tw-ml-auto tw-w-40 tw-block">Submit</button>
+    </form>
+  </main>
+  <footer class="tw-border-t tw-border-black/20">
+    <div class="tw-container tw-w-4/5 tw-flex tw-flex-col tw-items-center tw-gap-8 tw-font-poppins">
+      <div class="tw-flex max-md:tw-flex-col tw-items-start tw-w-full tw-justify-between tw-my-12">
+        <div class="tw-flex tw-flex-col tw-items-start tw-gap-12">
+          <a class="tw-flex tw-items-center tw-gap-1" href="./index.html">
+            <img src="./img/logo.png" alt="logo" class="tw-w-12">
+            <h1 class="tw-text-2xl tw-font-bold">Furniro.</h1>
+          </a>
+          <p class="tw-font-poppins tw-text-base tw-text-gray-500 tw-text-start">400 University Drive Suite 200 Coral
+            Gables, <br> FL 33134 USA</p>
+        </div>
+        <ul class="tw-flex tw-flex-col tw-items-start tw-gap-8">
+          <li class="tw-text-base tw-font-medium tw-text-gray-500 tw-text-start">Links</li>
+          <li><a href="./index.html"
+              class="tw-text-base tw-font-medium tw-text-black tw-text-start tw-transition-all hover:tw-text-main">Home</a>
+          </li>
+          <li><a href="./shop-products.html"
+              class="tw-text-base tw-font-medium tw-text-black tw-text-start tw-transition-all hover:tw-text-main">Shop</a>
+          </li>
+          <li><a href="./login.html"
+              class="tw-text-base tw-font-medium tw-text-black tw-text-start tw-transition-all hover:tw-text-main">Login</a>
+          </li>
+          <li><a href="./register.html"
+              class="tw-text-base tw-font-medium tw-text-black tw-text-start tw-transition-all hover:tw-text-main">Register</a>
+          </li>
+        </ul>
+        <ul class="tw-flex tw-flex-col tw-items-start tw-gap-8">
+          <li class="tw-text-base tw-font-medium tw-text-gray-500 tw-text-start">Help</li>
+          <li><a href="./shop-products.html"
+              class="tw-text-base tw-font-medium tw-text-black tw-text-start tw-transition-all hover:tw-text-main">Payment
+              Options</a></li>
+          <li><a href="./shop-products.html"
+              class="tw-text-base tw-font-medium tw-text-black tw-text-start tw-transition-all hover:tw-text-main">Returns</a>
+          </li>
+          <li><a href="./shop-products.html"
+              class="tw-text-base tw-font-medium tw-text-black tw-text-start tw-transition-all hover:tw-text-main">Privacy
+              Policies</a></li>
+        </ul>
+        <div class="tw-flex tw-flex-col tw-items-start tw-gap-14">
+          <h5 class="tw-text-base tw-font-medium tw-text-gray-500 tw-text-start">Newsletter</h5>
+          <form action="." class="tw-flex tw-items-center tw-gap-4">
+            <div class="form-floating">
+              <input type="email" name="email" placeholder="Enter Your Email Address"
+                class="form-control tw-text-sm tw-border-0 tw-border-b !tw-border-black tw-rounded-none focus:tw-shadow-none">
+              <label for="floatingInput" class="tw-text-sm tw-text-gray-500">Email address</label>
+            </div>
+            <input type="submit" value="SUBSCRIBE"
+              class="tw-text-sm tw-font-medium tw-border-0 tw-border-b tw-border-black tw-p-3 tw-pb-2  tw-transition-all hover:tw-text-main hover:tw-border-main">
+          </form>
+        </div>
+      </div>
+      <p class="tw-text-base tw-py-8 tw-border-t tw-border-black/20 tw-text-center tw-w-full">&copy; 2023 furniro. All
+        rights reserved</p>
+    </div>
+  </footer>
+  <script defer src="./style/Bootstrap-v5.3.3/popper.min.js"></script>
+  <script defer src="./style/Bootstrap-v5.3.3/bootstrap.min.js"></script>
+</body>
+
+</html>

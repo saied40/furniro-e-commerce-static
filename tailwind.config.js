@@ -6,7 +6,10 @@ module.exports = {
     extend: {
       colors: {
         "moderate-orange": "#b88e2f",
-        main: "var(--main-clr)",
+        main: {
+          DEFAULT: "var(--main-clr)",
+          25: "#b88e2f40",
+        },
         dark: {
           33: "#333333",
           66: "#666666",
@@ -142,6 +145,7 @@ module.exports = {
             opacity: "0.8",
             transition: "all 500ms cubic-bezier(0.4, 0, 0.2, 1)",
             zIndex: "-10",
+            display: "none",
           },
 
           "&:hover": {
@@ -149,6 +153,7 @@ module.exports = {
               transform: "translate(0, 0)",
               opacity: "0",
               zIndex: "10",
+              display: "inline-block",
             },
           },
         },
@@ -350,7 +355,7 @@ module.exports = {
             height: "100%",
             fontFamily: "var(--secondary-font)",
             fontWeight: "600",
-            zIndex: "10",
+            zIndex: "8",
             transition: "all 300ms cubic-bezier(0.4, 0, 0.2, 1)",
             backgroundColor: "#3a3a3a00",
             opacity: "0",
@@ -403,11 +408,86 @@ module.exports = {
             },
           },
         },
+        ".page-head": {
+          padding: "4rem 0",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: "1rem",
+          backgroundImage: "url(../img/landing-3.png)",
+          backgroundPosition: "50% 30%",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          position: "relative",
+          textAlign: "center",
+          fontFamily: "var(--secondary-font)",
+          "&::before": {
+            content: "''",
+            position: "absolute",
+            top: "0",
+            left: "0",
+            width: "100%",
+            height: "100%",
+            backgroundColor: "#fff6",
+            zIndex: "1",
+          },
+          "> *": {
+            zIndex: "2",
+          },
+          ".title": {
+            fontSize: "3rem",
+            lineHeight: "1",
+            fontWeight: "500",
+            color: "#000",
+            textTransform: "capitalize",
+            textAlign: "center",
+          },
+          // nav: {
+          //   "--bs-breadcrumb-divider": "'>'",
+          // },
+          // ol: {
+          //   justifyContent: "center",
+          //   alignItems: "center",
+          //   "> *": {
+          //     fontWeight: "500",
+          //   },
+          // },
+        },
+        ".label-required::after": {
+          content: "'*'",
+          color: "red",
+          marginLeft: ".25rem",
+        },
+        ".slash-eye-cont": {
+          position: "relative",
+          "&.show::after": {
+            display: "none",
+          },
+          "&::after": {
+            content: "''",
+            position: "absolute",
+            top: "50%",
+            right: "5%",
+            width: "2px",
+            height: "60%",
+            backgroundColor: "var(--main-clr)",
+            transform: "translate(-50%, -50%) rotate(-45deg)",
+          },
+          ".img": {
+            position: "absolute",
+            top: "50%",
+            right: "0",
+            transform: "translate(-50%, -50%)",
+            cursor: "pointer",
+            width: "2rem",
+          },
+        },
       });
       addVariant("path", "& path");
       addVariant("focus", "&:focus");
       addVariant("focus-visible", "&:focus-visible");
       addVariant("active", "&.active");
+      addVariant("active-child", "& > .active");
       addVariant("child-hover-effect", "&:hover > *");
     },
   ],

@@ -1,6 +1,39 @@
+openFavorites?.addEventListener("click", (_) => {
+  [...navTab.children].forEach((item) => item.classList.remove("active"));
+  [...navTabContent.children].forEach((item) =>
+    item.classList.remove("active", "show")
+  );
+  // favoritesTab.classList.add("active");
+  favoritesTab.click();
+});
+
+openShoppingCart.addEventListener("click", (_) => {
+  [...navTab.children].forEach((item) => item.classList.remove("active"));
+  [...navTabContent.children].forEach((item) =>
+    item.classList.remove("active", "show")
+  );
+  // shoppingTab.classList.add("active");
+  shoppingTab.click();
+});
+
+[...dropdownMenu.children].forEach((item) =>
+  item.addEventListener("click", () => {
+    dropdownHead.innerText = item.innerText;
+  })
+);
+
+const setMainTop = (_) =>
+  (document.getElementById("main").style.top =
+    document.getElementById("header").offsetHeight + "px");
+window.addEventListener("resize", setMainTop);
+window.addEventListener("load", setMainTop);
+
+/* ################# CAROUSEL SCRIPT ################# */
+
 const wrapper = document.getElementById("carouselWrapper");
 const carousel = document.getElementById("carousel");
-const firstCardWidth = carousel.querySelector(".tw-carousel-card").offsetWidth + 18;
+const firstCardWidth =
+  carousel.querySelector(".tw-carousel-card").offsetWidth + 18;
 const carouselChildren = [...carousel.children];
 
 let isDragging = false,
@@ -8,8 +41,7 @@ let isDragging = false,
   startX,
   startScrollLeft,
   timeoutId,
-
-// Get the number of cards that can fit in the carousel at once
+  // Get the number of cards that can fit in the carousel at once
   cardPerView = Math.round(carousel.offsetWidth / firstCardWidth);
 
 // Insert copies of the last few cards to beginning of carousel for infinite scrolling

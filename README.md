@@ -1,8 +1,6 @@
 # Furniro E-commerce website
 
-it's an e-commerce website design I built using bootstrap and tailwind css with vanilla javascript
-
-#### **still in development process**
+it's a semple e-commerce website design I built using bootstrap, tailwind css, and vanilla javascript
 
 ### project Structure
 
@@ -12,7 +10,7 @@ it's an e-commerce website design I built using bootstrap and tailwind css with 
 
 <br />
 
-2. Products list Page
+2. Shop Products list Page
 
 - contains a list of all products with ability to filter the products based on catigory and the rating in a sidebar
 
@@ -36,8 +34,14 @@ it's an e-commerce website design I built using bootstrap and tailwind css with 
 
 <br />
 
-6. user profile page
+6. wishlist Page
 
-- contains user's information and order history
+- contains a list of products the user has already added to the wishlist
+
+<br />
+
+7. login & register pages
+
+- contains a form to fill in the user's information to login or register
 
 <br />

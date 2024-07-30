@@ -15,10 +15,12 @@
 #carousel.no-transition {
   scroll-behavior: auto;
 }
+
 #carousel.dragging {
   scroll-snap-type: none;
   scroll-behavior: auto;
 }
+
 #carousel.dragging .card {
   cursor: grab;
   user-select: none;
@@ -64,5 +66,75 @@
       background-color: #000;
       border-radius: 50%;
     }
+  }
+}
+
+nav[aria-label="breadcrumb"] {
+  --bs-breadcrumb-divider: '>';
+
+  ol {
+    justify-content: center;
+    align-items: center;
+
+    > * {
+      font-weight: 500;
+    }
+  }
+}
+
+.table * {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 500;
+}
+
+.table tbody tr td {
+
+  &:nth-child(1) {
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    /* font-weight: 600; */
+  }
+
+  &:nth-child(2) a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+    &:hover p {
+      color: var(--main-clr);
+    }
+
+    img {
+      width: 4rem;
+      border-radius: .5rem;
+    }
+  
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 600;
+      color: var(--dark-33);
+      text-wrap: wrap;
+      transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}
+
+.form-control:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 .25rem #b88e2f40;
+  border-color: var(--main-clr);
+}
+
+.pagination .page-item .page-link {
+  color: var(--dark-33);
+  font-size: 1.25rem;
+  font-weight: 500;
+
+  &:hover, &:focus {
+    color: var(--main-clr);
+    box-shadow: none;
   }
 }
